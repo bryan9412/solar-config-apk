@@ -18,7 +18,7 @@ jobs:
         with: { distribution: temurin, java-version: '17' }
       - name: Copiar la app como assets
         run: |
-          mkdir -p app/src/main/assets
+          mkdir -p app/src/main/assets app/src/main/res/mipmap-xxxhdpi
           cp sitio/index.html sitio/icon.svg sitio/favicon-64.png app/src/main/assets/
           cp sitio/icon-192.png app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
       - uses: gradle/actions/setup-gradle@v4
